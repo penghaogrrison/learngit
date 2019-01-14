@@ -17,6 +17,7 @@
     </dependencies>
 
     <build>
+		<defaultGoal>compile</defaultGoal>
         <plugins>
             <!--compile-->
             <plugin>
@@ -64,10 +65,11 @@
                 <artifactId>findbugs-maven-plugin</artifactId>
                 <version>3.0.4</version>
                 <configuration>
-					<threshold>High</threshold>
-					<effort>Default</effort>
+					<!--threshold>High</threshold>
+					<effort>Default</effort-->
 					<findbugsXmlOutput>true</findbugsXmlOutput>
-					<findbugsXmlOutputDirectory>target/site</findbugsXmlOutputDirectory>
+					<findbugsXmlWithMessages>true</findbugsXmlWithMessages>
+					<xmlOutput>true</xmlOutput>
                 </configuration>
             </plugin>
         </plugins>
